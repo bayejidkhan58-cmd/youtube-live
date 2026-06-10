@@ -6,9 +6,10 @@ on:
 jobs:
   stream:
     runs-on: ubuntu-latest
+    timeout-minutes: 240
     steps:
       - uses: actions/checkout@v3
       - name: Install FFmpeg
-        run: sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - name: Start Stream
         run: bash stream.sh
