@@ -1,6 +1,6 @@
 #!/bin/bash
-VIDEO_URL="YOUR_VIDEO_URL"
-STREAM_KEY="YOUR_STREAM_KEY"
+VIDEO_URL="https://drive.google.com/uc?export=download&id=1eUsRUHW-nZTSYPneaAd0CTbnzh4VIMcj"
+STREAM_KEY=pdu9-wert-z2se-zw9w-dg7r
 ffmpeg -re -stream_loop -1 -i "$VIDEO_URL" \
   -c:v libx264 -preset veryfast -b:v 3000k \
   -c:a aac -b:a 128k \
