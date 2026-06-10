@@ -1,5 +1,5 @@
 #!/bin/bash
-VIDEO_URL="https://drive.google.com/uc?export=download&id=1eUsRUHW-nZTSYPneaAd0CTbnzh4VIMcj&confirm=t"
+VIDEO_URL="https://www.dropbox.com/scl/fi/fw544gii8ww6co101vli9/.mp4.mp4?rlkey=u7b6tfmbgn3k8lq9wkqrjvsyf&st=fp42xyts&dl=1"
 STREAM_KEY=pdu9-wert-z2se-zw9w-dg7r
 ffmpeg -re -stream_loop -1 -i "$VIDEO_URL" \
   -c:v libx264 -preset veryfast -b:v 3000k \
