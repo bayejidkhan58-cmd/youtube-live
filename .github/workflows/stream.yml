@@ -15,7 +15,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Download Video
-        run: wget -O video.mp4 "তোমার_dropbox_link"
+        run: wget -O video.mp4 "https://www.dropbox.com/s/xxxxx/video.mp4?dl=1"
 
       - name: Start Stream
         working-directory: ${{ github.workspace }}
