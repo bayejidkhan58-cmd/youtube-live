@@ -12,9 +12,10 @@ jobs:
         uses: actions/checkout@v3
       - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Download Video
+        run: wget -O video.mp4 "https://www.dropbox.com/scl/fi/fw544gii8ww6co101vli9/.mp4.mp4?rlkey=u7b6tfmbgn3k8lq9wkqrjvsyf&st=fp42xyts&dl=1"
       - name: Start Stream
         working-directory: ${{ github.workspace }}
         run: |
-          ls -la
           chmod +x stream.sh
           bash stream.sh
