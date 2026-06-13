@@ -10,14 +10,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install FFmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Download Video
-        run: |
-          pip install yt-dlp
-          yt-dlp -o video.mp4 "https://youtu.be/x0ZpxkDeXIg?si=Jhk7XEymY50LkN4e"
+        run: wget -O video.mp4 "https://www.dropbox.com/scl/fi/23dgnitef3j2n4b6wcjqs/Record_2026-06-11-20-26-06.mp4?rlkey=vrwyftsj5wjfm9m136xpax4l8&st=w6njaed5&dl=1"
+
       - name: Start Stream
         working-directory: ${{ github.workspace }}
         run: |
           chmod +x stream.sh
           bash stream.sh
+        env:
+          STREAM_KEY: ${{ secrets.STREAM_KEY }}
