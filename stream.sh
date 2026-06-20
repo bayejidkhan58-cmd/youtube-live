@@ -1,5 +1,5 @@
 #!/bin/bash
-DURATION=$((10 * 3600))
+DURATION=$((3 * 1800))
 ffmpeg -re -stream_loop -1 -i "video.mp4" \
   -c:v libx264 -preset veryfast \
   -b:v 3000k -maxrate 3000k -bufsize 6000k \
