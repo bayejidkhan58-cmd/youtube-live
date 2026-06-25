@@ -1,24 +1,20 @@
 name: YouTube Live Stream
+
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 15 * * *'
+
 jobs:
   stream:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
-    env:
-      STREAM_KEY: ${{ secrets.STREAM_KEY }}
+    timeout-minutes: 270
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Install FFmpeg
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install ffmpeg
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
-      - name: Download Video
-        run: wget -O video.mp4 "$VIDEO_URL"
+
+      - name: Run stream
         env:
-          VIDEO_URL: "https://www.dropbox.com/scl/fi/nx2vz3ynbzz5rttukh7j5/.mp4.mp4?rlkey=p4vy3m0hqg5hbvr07gtx5cief&st=684n3lzj&dl=1"
-      - name: Start Stream
-        run: |
-          chmod +x stream.sh
-          bash stream.sh
+          STREAM_KEY: ${{ secrets.STREAM_KEY }}
+        run: bash stream.sh
