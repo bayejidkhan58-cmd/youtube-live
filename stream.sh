@@ -24,10 +24,10 @@ download_video() {
 }
 
 # Download all videos with validation
-download_video "https://www.dropbox.com/scl/fi/xxxxx/v1.mp4?dl=1" "v1.mp4"
-download_video "https://www.dropbox.com/scl/fi/xxxxx/v2.mp4?dl=1" "v2.mp4"
-download_video "https://www.dropbox.com/scl/fi/xxxxx/v3.mp4?dl=1" "v3.mp4"
-download_video "https://www.dropbox.com/scl/fi/xxxxx/v4.mp4?dl=1" "v4.mp4"
+download_video "https://www.dropbox.com/scl/fi/2mxnozhxa5xlea1pp79bz/2026-06-26-02.17.50.mp4?rlkey=dql7cwhf6oykw5z8wmr992dd1&st=2p9si5l3&dl=1"
+download_video "https://www.dropbox.com/scl/fi/2mxnozhxa5xlea1pp79bz/2026-06-26-02.17.50.mp4?rlkey=dql7cwhf6oykw5z8wmr992dd1&st=nkh7n8us&dl=1"
+download_video "https://www.dropbox.com/scl/fi/umvowawsbagjor9ujvq68/2026-06-26-02.35.32.mp4?rlkey=jmi8jgoca1nydz99kdii39p7c&st=rsi1kgva&dl=1"
+download_video "https://www.dropbox.com/scl/fi/umvowawsbagjor9ujvq68/2026-06-26-02.35.32.mp4?rlkey=jmi8jgoca1nydz99kdii39p7c&st=i4zbwvsq&dl=1"
 
 # Build playlist
 echo "file 'v1.mp4'
