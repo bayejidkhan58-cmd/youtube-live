@@ -17,7 +17,7 @@ jobs:
       - name: Download Video
         run: wget -O video.mp4 "$VIDEO_URL"
         env:
-          VIDEO_URL: "https://www.dropbox.com/scl/fi/t2j8abgo2lssd4mj2usjy/.mp4.mp4?rlkey=h5tknpd2qpm0ld1umk9w0og2j&st=4fpzl7q4&dl=1"
+          VIDEO_URL: "https://www.dropbox.com/scl/fi/nx2vz3ynbzz5rttukh7j5/.mp4.mp4?rlkey=p4vy3m0hqg5hbvr07gtx5cief&st=684n3lzj&dl=1"
       - name: Start Stream
         run: |
           chmod +x stream.sh
