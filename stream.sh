@@ -34,9 +34,10 @@ file 'v4.mp4'" > playlist.txt
 echo "Starting Shorts-ready vertical stream for 4 hours..."
 timeout 14400 ffmpeg -re -stream_loop -1 -f concat -safe 0 -i playlist.txt \
   -vf "scale=1080:1920:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2" \
-  -c:v libx264 -preset veryfast -b:v 3000k \
+  -c:v libx264 -preset ultrafast -tune zerolatency \
+  -b:v 2000k -maxrate 2200k -bufsize 4000k \
   -g 48 -keyint_min 48 \
-  -c:a aac -b:a 128k -ar 44100 \
+  -c:a aac -b:a 96k -ar 44100 \
   -f flv "rtmp://a.rtmp.youtube.com/live2/${STREAM_KEY}"
 
 echo "Stream finished after 4 hours."
